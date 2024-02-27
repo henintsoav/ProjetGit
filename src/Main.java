@@ -1,3 +1,5 @@
+import java.util.Collections;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
@@ -7,7 +9,7 @@ public class Main {
         // Créer des contacts
         Contact contact1 = new Contact("Doe", "John", 123456789, "john.doe@example.com");
         Contact contact2 = new Contact("Smith", "Jane", 987654321, "jane.smith@example.com");
-
+        Contact contact3 = new Contact("Gates", "Billy", 987654643, "billy.gates@example.com");
         // Ajouter des contacts à ContactManager
         contactManager.ajouterContact(contact1);
         contactManager.ajouterContact(contact2);
@@ -28,7 +30,19 @@ public class Main {
 
         // Afficher tous les contacts après modifcation
         System.out.println("\nContacts après supression:");
+
+        //contactManager.ajouterContact(contact1);
+        contactManager.ajouterContact(contact2);
+        contactManager.ajouterContact(contact3);
         contactManager.afficherContacts();
+
+
+        //Triage des contacts par le nom
+        contactManager.trierContactsParNom();
+        System.out.println("\nContacts triés par nom :");
+        for (Contact contact : contactManager.getContacts()) {
+            System.out.println(contact.getNom());
+        }
     }
 }
 

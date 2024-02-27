@@ -1,8 +1,21 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ContactManager {
 
     private ArrayList<Contact> contacts;
+
+    public ArrayList<Contact> getContacts() {
+        return contacts;
+    }
+
+    public void setContacts(ArrayList<Contact> contacts) {
+        this.contacts = contacts;
+    }
+
+    public void trierContactsParNom() {
+        Collections.sort(contacts, new Contact.NomComparator());
+    }
 
     public ContactManager() {
         contacts = new ArrayList<>();
