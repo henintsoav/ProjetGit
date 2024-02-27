@@ -1,33 +1,44 @@
 import java.util.ArrayList;
 
 public class ContactManager {
-    private ArrayList<Contact> monContact;
+
+    private ArrayList<Contact> contacts;
 
     public ContactManager() {
-        monContact = new ArrayList<>();
-    }
-    public void ajouterContact( Contact contact){
-        monContact.add(contact);
+        contacts = new ArrayList<>();
     }
 
-    public void supprimerContact(Contact contact){
-        monContact.remove(contact);
+    public void ajouterContact(Contact contact) {
+        contacts.add(contact);
     }
 
-    public void modifierContact(Contact contact){
-        monContact.set(1, contact);
+    public void supprimerContact(Contact contact) {
+        contacts.remove(contact);
     }
 
-    public void afficherContacts(){
-        if (monContact.isEmpty()){
-            System.out.println("C'est le vide");
+    public void modifierContact(Contact contact, String nouveauNom, String nouveauPrenom, Integer nouveauNumero, String nouvelleAdresseEMail) {
+        int index = contacts.indexOf(contact);
+        if (index != -1) {
+            Contact c = contacts.get(index);
+            c.setNom(nouveauNom);
+            c.setPrenom(nouveauPrenom);
+            c.setNumeroTelephone(nouveauNumero);
+            c.setAdresseEMail(nouvelleAdresseEMail);
+            contacts.set(index, c);
         } else {
-            System.out.println("Voici les contacts : ");
-            for (Contact c : monContact)
+            System.out.println("Le contact n'existe pas.");
+        }
+    }
+
+    public void afficherContacts() {
+        if (contacts.isEmpty()) {
+            System.out.println("La liste de contacts est vide.");
+        } else {
+            System.out.println("Liste des contacts :");
+            for (Contact c : contacts) {
                 System.out.println(c);
+            }
         }
     }
 
 }
-
-
