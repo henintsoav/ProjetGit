@@ -1,14 +1,23 @@
+import java.util.Comparator;
+
 public class Contact {
     private String nom;
     private String prenom;
     private Integer numeroTelephone;
     private String adresseEMail;
 
-    public Contact(String nom,String prenom, Integer numeroTelephone, String adresseEMail) {
+    public Contact(String nom, String prenom, Integer numeroTelephone, String adresseEMail) {
         this.nom = nom;
         this.prenom = prenom;
         this.numeroTelephone = numeroTelephone;
         this.adresseEMail = adresseEMail;
+    }
+
+    public static class PrenomComparator implements Comparator<Contact> {
+        @Override
+        public int compare(Contact c1, Contact c2) {
+            return c1.getPrenom().compareTo(c2.getPrenom());
+        }
     }
 
     public String getNom() {
@@ -19,7 +28,7 @@ public class Contact {
         this.nom = nom;
     }
 
-    public java.lang.String getPrenom() {
+    public String getPrenom() {
         return prenom;
     }
 
@@ -35,7 +44,7 @@ public class Contact {
         this.numeroTelephone = numeroTelephone;
     }
 
-    public java.lang.String getAdresseEMail() {
+    public String getAdresseEMail() {
         return adresseEMail;
     }
 
