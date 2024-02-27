@@ -13,6 +13,13 @@ public class Contact {
         this.adresseEMail = adresseEMail;
     }
 
+    public static class PrenomComparator implements Comparator<Contact> {
+        @Override
+        public int compare(Contact c1, Contact c2) {
+            return c1.getPrenom().compareTo(c2.getPrenom());
+        }
+    }
+
     public String getNom() {
         return nom;
     }
