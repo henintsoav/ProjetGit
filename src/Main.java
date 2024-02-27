@@ -50,6 +50,20 @@ public class Main {
         for (Contact contact : contactManager.getContacts()) {
             System.out.println(contact.getPrenom());
         }
+
+        Contact contact4 = new Contact("Damien", "Dack", 9878424, "damien.dack@example.com", "Tu est mon collegue", "travail");
+        Contact contact5 = new Contact("Sisao", "Belame", 0764232, "sisao.belame@example.com", "Tu est ma famille", "famille");
+        Contact contact6 = new Contact("Max", "Dallas", 824538, "max.dallas@example.com", "Tu est mon ami", "ami");
+
+        contactManager.ajouterContact(contact4);
+        contactManager.ajouterContact(contact5);
+        contactManager.ajouterContact(contact6);
+
+        System.out.println("\nVoici la liste des personnes");
+        for (Contact c : contactManager.getContacts())
+            System.out.println(c);
+
     }
+
 }
 
