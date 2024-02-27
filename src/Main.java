@@ -43,6 +43,13 @@ public class Main {
         for (Contact contact : contactManager.getContacts()) {
             System.out.println(contact.getNom());
         }
+
+        //Triage des contacts par le prénom
+        contactManager.trierContactsParPrenom();
+        System.out.println("\nContacts triés par prénom :");
+        for (Contact contact : contactManager.getContacts()) {
+            System.out.println(contact.getPrenom());
+        }
     }
 }
 

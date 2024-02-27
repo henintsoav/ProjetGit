@@ -53,7 +53,5 @@ public class ContactManager {
     public void trierContactsParPrenom() {
         Collections.sort(contacts, new Contact.PrenomComparator());
     }
-    public void setContacts(ArrayList<Contact> contacts) {
-        this.contacts = contacts;
-    }
+
 }
