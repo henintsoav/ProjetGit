@@ -1,14 +1,14 @@
 public class Contact {
     private String nom;
     private String prenom;
-    private String adresseEmail;
-    private int numeroTelephone;
+    private Integer numeroTelephone;
+    private String adresseEMail;
 
-    public Contact(String nom, String prenom, String adresseEmail, int numeroTelephone) {
+    public Contact(String nom,String prenom, Integer numeroTelephone, String adresseEMail) {
         this.nom = nom;
         this.prenom = prenom;
-        this.adresseEmail = adresseEmail;
         this.numeroTelephone = numeroTelephone;
+        this.adresseEMail = adresseEMail;
     }
 
     public String getNom() {
@@ -19,7 +19,7 @@ public class Contact {
         this.nom = nom;
     }
 
-    public String getPrenom() {
+    public java.lang.String getPrenom() {
         return prenom;
     }
 
@@ -27,29 +27,24 @@ public class Contact {
         this.prenom = prenom;
     }
 
-    public String getAdresseEmail() {
-        return adresseEmail;
-    }
-
-    public void setAdresseEmail(String adresseEmail) {
-        this.adresseEmail = adresseEmail;
-    }
-
-    public int getNumeroTelephone() {
+    public Integer getNumeroTelephone() {
         return numeroTelephone;
     }
 
-    public void setNumeroTelephone(int numeroTelephone) {
+    public void setNumeroTelephone(Integer numeroTelephone) {
         this.numeroTelephone = numeroTelephone;
+    }
+
+    public java.lang.String getAdresseEMail() {
+        return adresseEMail;
+    }
+
+    public void setAdresseEMail(String adresseEMail) {
+        this.adresseEMail = adresseEMail;
     }
 
     @Override
     public String toString() {
-        return "Contact{" +
-                "nom='" + nom + '\'' +
-                ", prenom='" + prenom + '\'' +
-                ", adresseEmail='" + adresseEmail + '\'' +
-                ", numeroTelephone=" + numeroTelephone +
-                '}';
+        return "Nom: " + nom + ", Prénom: " + prenom + ", Numéro de téléphone: " + numeroTelephone + ", Adresse e-mail: " + adresseEMail;
     }
 }
