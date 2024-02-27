@@ -5,12 +5,16 @@ public class Contact {
     private String prenom;
     private Integer numeroTelephone;
     private String adresseEMail;
+    private String commentaires;
+    private String catégories;
 
-    public Contact(String nom, String prenom, Integer numeroTelephone, String adresseEMail) {
+    public Contact(String nom, String prenom, Integer numeroTelephone, String adresseEMail, String commentaires, String catégories) {
         this.nom = nom;
         this.prenom = prenom;
         this.numeroTelephone = numeroTelephone;
         this.adresseEMail = adresseEMail;
+        this.commentaires = commentaires;
+        this.catégories = catégories;
     }
 
     public static class PrenomComparator implements Comparator<Contact> {
@@ -59,8 +63,24 @@ public class Contact {
         this.adresseEMail = adresseEMail;
     }
 
+    public String getCommentaires() {
+        return commentaires;
+    }
+
+    public void setCommentaires(String commentaires) {
+        this.commentaires = commentaires;
+    }
+
+    public String getCatégories() {
+        return catégories;
+    }
+
+    public void setCatégories(String catégories) {
+        this.catégories = catégories;
+    }
+
     @Override
     public String toString() {
-        return "Nom: " + nom + ", Prénom: " + prenom + ", Numéro de téléphone: " + numeroTelephone + ", Adresse e-mail: " + adresseEMail;
+        return "Nom: " + nom + ", Prénom: " + prenom + ", Numéro de téléphone: " + numeroTelephone + ", Adresse e-mail: " + adresseEMail + " commentaire : " + commentaires + " catégorie : " + catégories ;
     }
 }

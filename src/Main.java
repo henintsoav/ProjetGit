@@ -7,9 +7,10 @@ public class Main {
         ContactManager contactManager = new ContactManager();
 
         // Créer des contacts
-        Contact contact1 = new Contact("Doe", "John", 123456789, "john.doe@example.com");
-        Contact contact2 = new Contact("Smith", "Jane", 987654321, "jane.smith@example.com");
-        Contact contact3 = new Contact("Gates", "Billy", 987654643, "billy.gates@example.com");
+        Contact contact1 = new Contact("Doe", "John", 123456789, "john.doe@example.com", "Qu'est ce qui est jaune et qui attend ?", "L'idiot du village");
+        Contact contact2 = new Contact("Passe", "Marina", 987654321, "jane.smith@example.com", "Marine passe et tu t'écartes, Marina domine et tu t'inclines", "amis");
+        Contact contact3 = new Contact("Mariage", "Lydia", 987654643, "billy.gates@example.com", "Ah le gâteau, il était sec ! T'appuyais dessus, il y avait le jus qui sortait", "famille");
+        Contact contact4 = new Contact("Keltoum", "Leila", 987654643, "billy.gates@example.com", "Raïe aïe aïe on s'est castagne sur le palier", "Inconnue au bataillon");
         // Ajouter des contacts à ContactManager
         contactManager.ajouterContact(contact1);
         contactManager.ajouterContact(contact2);
