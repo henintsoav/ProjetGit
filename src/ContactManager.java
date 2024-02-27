@@ -9,10 +9,6 @@ public class ContactManager {
         return contacts;
     }
 
-    public void setContacts(ArrayList<Contact> contacts) {
-        this.contacts = contacts;
-    }
-
     public void trierContactsParNom() {
         Collections.sort(contacts, new Contact.NomComparator());
     }
